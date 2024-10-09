@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Restoran</title>
+</head>
+<body>
+
+    <h1>Membership Restoran</h1>
+    <p id="result"></p>
+
+    <script>
+        // Data customer
+        const customers = [
+            { name: "Lena", hasMembership: true },
+            { name: "Rio", hasMembership: false }
+        ];
+
+        // Fungsi untuk mengecek membership dan mengembalikan pesan
+        function checkMembership(customer) {
+            if (customer.hasMembership) {
+                return customer.name + " Mendapatkan diskon 5%";
+            } else {
+                return customer.name + " Tidak mendapatkan diskon";
+            }
+        }
+
+        // Mengambil elemen untuk menampilkan hasil
+        const resultElement = document.getElementById('result');
+
+        // Variabel untuk menampung hasil
+        let resultText = "";
+
+        // Mengecek membership untuk masing-masing customer dan menambahkan ke hasil
+        customers.forEach(function(customer) {
+            resultText += checkMembership(customer) + "<br>";
+        });
+
+        // Menampilkan hasil di elemen HTML
+        resultElement.innerHTML = resultText;
+    </script>
+
+</body>
+</html>
