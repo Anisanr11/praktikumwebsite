@@ -1,36 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Percabangan JavaScript</title>
-
+    <title>pengulangan JavaScript</title>
 </head>
-
 <body>
-
-<p>
-
-<script language="JavaScript">
-
-let nama "NAMA ANDA";
-
-document.write(("Halo " + nama + "!</br>").repeat(5));
-
-</script>
-
-</p>
-
+        <p>
+            <script language="JavaScript">
+                let nama "ANISA NURROHMAH";
+                document.write(("Halo " + nama + "!</br>").repeat(5));
+            </script>
+        </p>
 <script>
-
-let barang = ["Barang 1", "Barang 2", "Barang 3"];
-
-for (indeks in barang) {
-
-document.write("<p>barang nomor " + indeks +":"+ barang[indeks] + "</p>"); }
-
+    let barang = ["Sunscreen", "Moisturizer", "Serum"];
+    for (indeks in barang) {
+    document.write("<p>barang nomor " + indeks +" : "+ barang[indeks] + "</p>");
+    }
 </script>
-
 </P>
-
 </body>
-
 </html>
