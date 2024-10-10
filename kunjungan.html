@@ -1,23 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <title>Total Pembelian Pelanggan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Bonus Kunjungan</title>
+    <script>
+      // Fungsi untuk menghitung kunjungan dan bonus
+function cekKunjungan() {
+    // Mengambil input dari pengguna
+    let totalKunjungan = parseInt(prompt("Masukkan total kunjungan pelanggan:"));
+    
+    // Mengecek apakah input valid
+    if (isNaN(totalKunjungan) || totalKunjungan < 0) {
+        alert("Input tidak valid. Silakan masukkan angka yang benar.");
+        return;
+    }
+
+    // Menghitung potongan kupon dan bonus
+    let potonganKupon = totalKunjungan;
+    let bonusGratis = (totalKunjungan >= 10) ? "Ya" : "Tidak";
+
+    // Menampilkan hasil
+    alert("Total kunjungan: " + totalKunjungan + "\n" +
+          "Potongan kupon yang dimiliki: " + potonganKupon + "\n" +
+          "Apakah bisa mendapatkan kunjungan gratis? " + bonusGratis);
+}
+
+// Menjalankan fungsi
+cekKunjungan();
+
+    </script>
 </head>
 <body>
-    <script>
-        let hargaBarang = 10000; 
-        let jumlahBarang = 55;   
-        const batasDiskon = 50;       
-        const persentaseDiskon = 0.10;
-        let totalHarga = hargaBarang * jumlahBarang;
-        let diskon = 0;
-        if (jumlahBarang > batasDiskon) {
-            diskon = totalHarga * persentaseDiskon;
-        }
-        let hargaSetelahDiskon = totalHarga - diskon;
-        console.log("Harga keseluruhan tanpa diskon: Rp" + totalHarga);
-        console.log("Diskon yang diberikan: Rp" + diskon);
-        console.log("Harga setelah diskon: Rp" + hargaSetelahDiskon);
-    </script>
+    <h1>Cek Kunjungan Salon</h1>
+    <label for="kunjungan">Masukkan total kunjungan pelanggan:</label>
+    <input type="number" id="kunjungan" min="0" required>
+    <button onclick="cekKunjungan()">Cek</button>
 </body>
 </html>
